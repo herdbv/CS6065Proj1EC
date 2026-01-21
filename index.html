@@ -13,7 +13,7 @@
   </table>
   <script>
     async function fetchStudentData() {
-      const response = await fetch('https://happy-ground-0a112c70f.4.azurestaticapps.net/');
+      const response = await fetch('/api/getStudentCounts');
       const data = await response.json();
       const tableBody = document.querySelector('#studentTable tbody');
       tableBody.innerHTML = data.map(row =>
